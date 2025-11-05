@@ -1,0 +1,193 @@
+/* ===============================
+   CLEAN HEADER (Always One Line)
+   =============================== */
+
+/* Navbar container */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 0.6rem 0;
+  z-index: 1000;
+}
+
+/* Slight shrink on scroll (optional aesthetic) */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.4rem 0;
+}
+
+/* Navbar layout */
+.navbar-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Left: Logo / Brand */
+.nav-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4CAF50 !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #45a049 !important;
+  transform: scale(1.05);
+}
+
+.navbar-logo {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+/* Center: Navigation Links */
+.nav-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-center-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.nav-link {
+  color: #2d3436 !important;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #4CAF50 !important;
+  background: rgba(76, 175, 80, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Right: Cart / Login / User */
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Buttons */
+button,
+.cart-button,
+.user-button,
+.login-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2d3436 !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+.cart-button:hover,
+.user-button:hover,
+.login-button:hover {
+  background: rgba(76, 175, 80, 0.1);
+  color: #4CAF50 !important;
+}
+
+/* Cart icon and badge */
+.cart-button {
+  position: relative;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.4rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* Remove all unused / mobile elements */
+.navbar-toggler,
+.nav-right-list,
+.nav-center.show {
+  display: none !important;
+}
+
+/* Universal align fix */
+.nav-center-list,
+.nav-right,
+.nav-left {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+/* ===============================
+   Dark Mode (Optional)
+   =============================== */
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background: rgba(33, 37, 41, 0.95);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  .nav-link,
+  .navbar-brand,
+  .cart-button,
+  .user-button {
+    color: #ffffff !important;
+  }
+  .nav-link:hover {
+    background: rgba(76, 175, 80, 0.2);
+  }
+}
+
+/* ===============================
+   Utility
+   =============================== */
+.nav-center-list {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
